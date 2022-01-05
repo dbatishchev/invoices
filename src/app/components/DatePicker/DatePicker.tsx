@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import ReactDatePicker from 'react-datepicker';
 import { format } from 'date-fns';
 import Input, { IconPosition } from '../Input/Input';
@@ -14,25 +14,9 @@ type DatePickerProps = {
 };
 
 const DatePicker: React.FC<DatePickerProps> = ({ value, onChange }) => {
-  // const [date, setDate] = useState(new Date());
-  // const onChange = (d: Date) => {
-  //   setDate(d);
-  // };
-
   const handleChange = (d: Date) => {
     onChange(d);
   };
-
-  const CustomInput = forwardRef((props, ref) => (
-    <Input
-      id="terms"
-      type="text"
-      icon={<Calendar />}
-      iconPosition={IconPosition.after}
-      {...props}
-      ref={ref}
-    />
-  ));
 
   return (
     <ReactDatePicker
@@ -40,7 +24,14 @@ const DatePicker: React.FC<DatePickerProps> = ({ value, onChange }) => {
       dateFormat="dd MMM yyyy"
       onChange={handleChange}
       showPopperArrow={false}
-      customInput={<CustomInput />}
+      customInput={(
+        <Input
+          id="terms"
+          type="text"
+          icon={<Calendar />}
+          iconPosition={IconPosition.after}
+        />
+      )}
       maxDate={new Date()}
       renderCustomHeader={({
         date: d,

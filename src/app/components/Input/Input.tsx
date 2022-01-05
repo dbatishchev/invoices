@@ -24,7 +24,7 @@ type InputProps = {
   [x: string]: any;
 };
 
-const Input: React.FC<InputProps> = ({
+const Input: React.FC<InputProps> = React.forwardRef(({
   id = '',
   name = '',
   type = 'text',
@@ -35,7 +35,7 @@ const Input: React.FC<InputProps> = ({
   iconPosition = IconPosition.after,
   hasError = false,
   ...rest
-}) => (
+}: InputProps, ref: React.Ref<HTMLInputElement>) => (
   <span
     className={`
       ${styles.container} 
@@ -50,6 +50,7 @@ const Input: React.FC<InputProps> = ({
       className={`${styles.input} ${className}`}
       readOnly={readonly}
       value={value}
+      ref={ref}
       {...rest}
     />
     {icon && (
@@ -58,6 +59,6 @@ const Input: React.FC<InputProps> = ({
       </span>
     )}
   </span>
-);
+));
 
 export default Input;
