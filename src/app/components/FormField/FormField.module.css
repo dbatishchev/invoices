@@ -1,0 +1,29 @@
+.formField {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.label {
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #7E88C3;
+}
+
+.error {
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: -0.208333px;
+    margin-left: auto;
+    text-align: right;
+}
+
+.warning {
+    color: #EC5757;
+}
+
+.input {
+    flex: 1 1 100%;
+}

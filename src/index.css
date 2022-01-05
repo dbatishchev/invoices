@@ -1,13 +1,181 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/** https://codepen.io/argyleink/pen/vYxrrpd */
+
+:root {
+  color-scheme: light;
+
+  --header-01: #373B53;
+  --bg-01: #F8F8FB;
+  --paper-01: #FFFFFF;
+  --paper-02: #373B53;
+  --paper-03: #F9FAFE;
+  --sidesheet-01: #FFFFFF;
+  --text-01: #0C0E16;
+  --text-02: #858BB2;
+
+  --btn-primary-bg: #7C5DFA;
+  --btn-primary-hover-bg: #9277FF;
+  --btn-primary-text: #FFFFFF;
+  --btn-faint-bg: #F9FAFE;
+  --btn-faint-hover-bg: #DFE3FA;
+  --btn-faint-text: #7E88C3;
+  --btn-dark-bg: #373B53;
+  --btn-dark-hover-bg: #0C0E16;
+  --btn-dark-text: #888EB0;
+  --btn-warning-bg: #EC5757;
+  --btn-warning-hover-bg: #FF9797;
+  --btn-warning-text: #FFFFFF;
+
+  --status-paid-bg: #F1FDFA;
+  --status-paid-text: #33D69F;
+  --status-pending-bg: #FFF9EF;
+  --status-pending-text: #FF8F00;
+  --status-draft-bg: #F4F4F5;
+  --status-draft-text: #373B53;
+
+  --input-bg-01: #FFFFFF;
+  --input-border-01: #DFE3FA;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --header-01: #1E2139;
+    --bg-01: #141625;
+    --paper-01: #1E2139;
+    --paper-02: #0C0E16;
+    --paper-03: #252945;
+    --sidesheet-01: #141625;
+    --text-01: #FFFFFF;
+    --text-02: #DFE3FA;
+
+    --btn-primary-bg: #7C5DFA;
+    --btn-primary-hover-bg: #9277FF;
+    --btn-primary-text: #FFFFFF;
+    --btn-faint-bg: #252945;
+    --btn-faint-hover-bg: transparent;
+    --btn-faint-text: #DFE3FA;
+    --btn-dark-bg: #373B53;
+    --btn-dark-hover-bg: #1E2139;
+    --btn-dark-text: #DFE3FA;
+    --btn-warning-bg: #EC5757;
+    --btn-warning-hover-bg: #FF9797;
+    --btn-warning-text: #FFFFFF;
+
+    --status-paid-bg: #1C2B41;
+    --status-paid-text: #33D69F;
+    --status-pending-bg: #2C2637;
+    --status-pending-text: #FF8F00;
+    --status-draft-bg: #292B46;
+    --status-draft-text: #DFE3FA;
+
+    --input-bg-01: #1E2139;
+    --input-border-01: #252945;
+  }
+}
+
+.theme--bright {
+  color-scheme: light;
+
+  --header-01: #373B53;
+  --bg-01: #F8F8FB;
+  --paper-01: #FFFFFF;
+  --paper-02: #373B53;
+  --paper-03: #F9FAFE;
+  --sidesheet-01: #FFFFFF;
+  --text-01: #0C0E16;
+  --text-02: #858BB2;
+
+  --btn-primary-bg: #7C5DFA;
+  --btn-primary-hover-bg: #9277FF;
+  --btn-primary-text: #FFFFFF;
+  --btn-faint-bg: #F9FAFE;
+  --btn-faint-hover-bg: #DFE3FA;
+  --btn-faint-text: #7E88C3;
+  --btn-dark-bg: #373B53;
+  --btn-dark-hover-bg: #0C0E16;
+  --btn-dark-text: #888EB0;
+  --btn-warning-bg: #EC5757;
+  --btn-warning-hover-bg: #FF9797;
+  --btn-warning-text: #FFFFFF;
+
+  --status-paid-bg: #F1FDFA;
+  --status-paid-text: #33D69F;
+  --status-pending-bg: #FFF9EF;
+  --status-pending-text: #FF8F00;
+  --status-draft-bg: #F4F4F5;
+  --status-draft-text: #373B53;
+
+  --input-bg-01: #FFFFFF;
+  --input-border-01: #DFE3FA;
+}
+
+.theme--dark {
+  color-scheme: dark;
+
+  --header-01: #1E2139;
+  --bg-01: #141625;
+  --paper-01: #1E2139;
+  --paper-02: #0C0E16;
+  --paper-03: #252945;
+  --sidesheet-01: #141625;
+  --text-01: #FFFFFF;
+  --text-02: #DFE3FA;
+
+  --btn-primary-bg: #7C5DFA;
+  --btn-primary-hover-bg: #9277FF;
+  --btn-primary-text: #FFFFFF;
+  --btn-faint-bg: #252945;
+  --btn-faint-hover-bg: transparent;
+  --btn-faint-text: #DFE3FA;
+  --btn-dark-bg: #373B53;
+  --btn-dark-hover-bg: #1E2139;
+  --btn-dark-text: #DFE3FA;
+  --btn-warning-bg: #EC5757;
+  --btn-warning-hover-bg: #FF9797;
+  --btn-warning-text: #FFFFFF;
+
+  --status-paid-bg: #1C2B41;
+  --status-paid-text: #33D69F;
+  --status-pending-bg: #2C2637;
+  --status-pending-text: #FF8F00;
+  --status-draft-bg: #292B46;
+  --status-draft-text: #DFE3FA;
+
+  --input-bg-01: #1E2139;
+  --input-border-01: #252945;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  font-family: 'Spartan', sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.25px;
+
+  background: var(--bg-01);
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+@media screen and (max-width: 1024px) {
+  .hide-on-small {
+    display: none;
+  }
 }

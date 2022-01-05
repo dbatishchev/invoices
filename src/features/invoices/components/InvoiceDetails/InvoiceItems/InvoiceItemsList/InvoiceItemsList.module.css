@@ -1,0 +1,45 @@
+.listContainer {
+    background: var(--paper-03);
+    border-radius: 8px 8px 0px 0px;
+    padding: 32px;
+}
+
+@media screen and (max-width: 1024px) {
+    .listContainer {
+        padding: 24px;
+    }
+}
+
+.name {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: var(--text-01);
+}
+
+.quantity {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #7E88C3;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    letter-spacing: -0.25px;
+    color: #7E88C3;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    letter-spacing: -0.25px;
+    color: var(--text-01);
+}

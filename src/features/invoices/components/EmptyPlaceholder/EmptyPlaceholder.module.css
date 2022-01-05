@@ -1,0 +1,30 @@
+.placeholder {
+    display: flex;
+    flex-direction: column;
+    max-width: 220px;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.img {
+    text-align: center;
+}
+
+.title {
+    margin: 64px 0 24px 0;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: -0.625px;
+    color: var(--text-01);
+}
+
+.description {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+
+    letter-spacing: -0.25px;
+    color: #888EB0;
+}

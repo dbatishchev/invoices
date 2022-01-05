@@ -1,0 +1,16 @@
+.addressFieldset {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 24px;
+}
+
+.addressFieldset > div:first-child {
+    grid-column: 1/-1;
+}
+
+@media screen and (max-width: 1024px) {
+    .addressFieldset > div:last-child {
+        grid-column: 1/-1;
+    }
+}
+

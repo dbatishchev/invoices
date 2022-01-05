@@ -1,0 +1,119 @@
+.invoice {
+    padding: 16px 32px;
+    background: var(--paper-01);
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+    border-radius: 8px;
+
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*align-items: center;*/
+
+
+    display: grid;
+    grid-template-areas: 'id paymentDue clientName total status link';
+    grid-template-columns: max-content max-content max-content 1fr min-content min-content;
+    grid-gap: 40px;
+    align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .invoice {
+        padding: 24px;
+        grid-template-areas: 'id clientName'
+                             'paymentDue status'
+                             'total status';
+        grid-template-columns: unset;
+        grid-gap: 8px;
+        justify-content: space-between;
+    }
+
+    .id {
+        margin-bottom: 16px;
+    }
+
+    .clientName {
+        justify-self: end;
+        align-self: start;
+    }
+}
+
+.id {
+    grid-area: id;
+
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #7E88C3;
+}
+
+.id strong {
+    color: var(--text-01);
+}
+
+.paymentDue {
+    grid-area: paymentDue;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #7E88C3;
+}
+
+.clientName {
+    grid-area: clientName;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #858BB2;
+}
+
+.total {
+    grid-area: total;
+    justify-self: end;
+
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.8px;
+    color: var(--text-01);
+}
+
+@media screen and (max-width: 1024px) {
+    .total {
+        justify-self: start;
+    }
+}
+
+.status {
+    grid-area: status;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+.statusLabel {
+    min-width: 110px;
+}
+
+.currency {
+    margin-right: 0.5ch;
+}
+
+.link {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 24px;
+    margin: 0 -24px;
+}
+
+@media screen and (max-width: 1024px) {
+    .link {
+        display: none;
+    }
+}

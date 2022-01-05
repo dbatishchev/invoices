@@ -1,0 +1,63 @@
+.btn {
+    font-family: 'Spartan', sans-serif;
+    padding: 16px 24px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    border-radius: 24px;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+}
+
+.withIcon {
+    padding: 8px 24px 8px 8px;
+}
+
+.primary {
+    background: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+}
+
+.primary:hover {
+    background: var(--btn-primary-hover-bg);
+}
+
+.faint {
+    background: var(--btn-faint-bg);
+    color: var(--btn-faint-text);
+}
+
+.faint:hover {
+    background: var(--btn-faint-hover-bg);
+}
+
+.dark {
+    background: var(--btn-dark-bg);
+    color: var(--btn-dark-text);
+}
+
+.dark:hover {
+    background: var(--btn-dark-hover-bg);
+}
+
+.warning {
+    background: var(--btn-warning-bg);
+    color: var(--btn-warning-text);
+}
+
+.warning:hover {
+    background: var(--btn-warning-hover-bg);
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    background: #FFFFFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 16px;
+}

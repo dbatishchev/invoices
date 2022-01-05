@@ -1,0 +1,7 @@
+.indicator {
+    padding: 0 16px;
+}
+
+.isFocused {
+    transform: rotate(180deg);
+}

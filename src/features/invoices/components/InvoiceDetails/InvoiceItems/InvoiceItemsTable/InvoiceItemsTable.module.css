@@ -1,0 +1,75 @@
+.tableContainer {
+    background: var(--paper-03);
+    border-radius: 8px 8px 0px 0px;
+    padding: 32px;
+}
+
+@media screen and (max-width: 1024px) {
+    .tableContainer {
+        padding: 24px;
+    }
+}
+
+.table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse:collapse
+}
+
+.table td, .table th {
+    padding: 16px;
+}
+
+.table th {
+    text-align: right;
+}
+
+.table th:first-child {
+    text-align: left;
+}
+
+.table td {
+    text-align: right;
+}
+
+.tableHeader {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 18px;
+    letter-spacing: -0.229167px;
+    color: #7E88C3;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: var(--text-01);
+}
+
+.quantity {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #7E88C3;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    letter-spacing: -0.25px;
+    color: #7E88C3;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    letter-spacing: -0.25px;
+    color: var(--text-01);
+}

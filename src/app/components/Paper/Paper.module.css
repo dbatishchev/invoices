@@ -1,0 +1,12 @@
+.paper {
+    background: var(--paper-01);
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+    border-radius: 8px;
+    padding: 24px 32px;
+}
+
+@media screen and (max-width: 1024px) {
+    .paper {
+        padding: 24px;
+    }
+}

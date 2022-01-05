@@ -1,0 +1,70 @@
+.sideSheet {
+    position: relative;
+    z-index: 1;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: #000000;
+    opacity: 0.5;
+}
+
+.body {
+    background: var(--sidesheet-01);
+    border-radius: 0px 20px 20px 0px;
+
+    width: 720px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    padding: 50px 56px 0 156px;
+
+    transform: translateX(-100%);
+    animation-duration: 0.2s;
+    animation-name: slideIn;
+    animation-fill-mode: forwards; /* https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode */
+
+    /*overflow-y: auto;*/
+}
+
+@media (prefers-reduced-motion) {
+    .body {
+        transform:  none;
+        animation: none;
+    }
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0%);
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .body {
+        width: 100%;
+        padding: 72px 24px 0 24px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .body {
+        padding-top: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .body {
+        padding-top: 72px;
+    }
+}

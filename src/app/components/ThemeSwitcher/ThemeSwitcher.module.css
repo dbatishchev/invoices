@@ -1,0 +1,8 @@
+.themeSwitcher {
+    appearance: none;
+    background: none;
+    margin: 0;
+    padding: 24px;
+    border: none;
+    cursor: pointer;
+}

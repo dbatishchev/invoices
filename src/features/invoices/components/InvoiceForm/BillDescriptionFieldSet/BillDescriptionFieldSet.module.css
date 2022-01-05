@@ -1,0 +1,9 @@
+.billDescriptionFieldset {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+}
+
+.billDescriptionFieldset > div:last-child {
+    grid-column: 1/-1;
+}

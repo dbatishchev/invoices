@@ -1,0 +1,12 @@
+.separator {
+    border: none;
+    width: 100%;
+    height: 1px;
+    background: #494E6E;
+    margin: 0;
+}
+
+.separatorVertical {
+    width: 1px;
+    height: 100%;
+}

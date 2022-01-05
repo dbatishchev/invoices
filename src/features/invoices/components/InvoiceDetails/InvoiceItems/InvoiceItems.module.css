@@ -1,0 +1,30 @@
+.footer {
+    background: var(--paper-02);
+    border-radius: 0px 0px 8px 8px;
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        padding: 24px;
+    }
+}
+
+.footerLabel {
+    font-size: 11px;
+    line-height: 18px;
+    letter-spacing: -0.229167px;
+    color: #FFFFFF;
+}
+
+.footerTotal {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: right;
+    letter-spacing: -0.5px;
+    color: #FFFFFF;
+}

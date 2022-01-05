@@ -1,0 +1,86 @@
+.form {
+    margin-bottom: calc(110px); /* связана с высотой подложуки футера */
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.5px;
+    color: var(--text-01);
+    margin-bottom: 48px;
+}
+
+@media screen and (max-width: 1024px) {
+    .title {
+        margin-top: 70px;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    margin-bottom: 48px; /* из-за подложки внизу */
+    margin-right: 16px;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 32px 56px 32px 0;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 720px;
+    height: 110px;
+
+    --shadow-offset: 0%; /** to 100% */
+    z-index: 1;
+}
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        width: 100%;
+    }
+}
+
+.footer:after {
+    content: '';
+    background: var(--sidesheet-01);
+    border-radius: 0px 20px 20px 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+@media screen and (max-width: 1024px) {
+    .footer:after {
+        border-radius: 0;
+    }
+}
+
+.footer:before {
+    content: '';
+    width: 100%;
+    height: 200px;
+
+    position: absolute;
+    bottom: calc(100% - 20px);
+    left: 0;
+    z-index: -1;
+
+    transform: translateY(var(--shadow-offset));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.1) 100%);
+
+    pointer-events: none;
+}
+
