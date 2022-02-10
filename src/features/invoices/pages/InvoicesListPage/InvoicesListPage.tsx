@@ -5,6 +5,7 @@ import InvoicesListStoreProvider from '../../providers/InvoicesListStoreProvider
 import InvoicesListStore from '../../stores/InvoicesListStore';
 import InvoicesList from '../../components/InvoicesList/InvoicesList';
 import { Status } from '../../types/Status';
+import arraysEqual from '../../util/arraysEqual';
 
 type InvoicesListPageProps = {
 
@@ -21,14 +22,14 @@ const InvoicesListPage: React.FC<InvoicesListPageProps> = () => {
 
   useEffect(() => {
     invoicesListStore.setStatusFilter(filtersFromQueryString);
-  }, [filtersFromQueryString.length]);
+  }, [filtersFromQueryString]);
 
   useEffect(() => {
-    if (JSON.stringify(filtersFromQueryString) === JSON.stringify(invoicesListStore.statusFilter)) {
+    if (arraysEqual(filtersFromQueryString, invoicesListStore.statusFilter)) {
       return;
     }
     setSearchParams({ filter: invoicesListStore.statusFilter });
-  }, [invoicesListStore.statusFilter.length]);
+  }, [filtersFromQueryString, invoicesListStore.statusFilter]);
 
   return (
     <InvoicesListStoreProvider store={invoicesListStore}>
