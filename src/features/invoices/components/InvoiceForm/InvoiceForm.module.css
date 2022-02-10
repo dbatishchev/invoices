@@ -1,5 +1,5 @@
 .form {
-    margin-bottom: calc(110px); /* связана с высотой подложуки футера */
+    margin-bottom: calc(110px);
     width: 100%;
     height: 100%;
 }
@@ -24,7 +24,7 @@
     flex-direction: column;
     gap: 48px;
 
-    margin-bottom: 48px; /* из-за подложки внизу */
+    margin-bottom: 48px;
     margin-right: 16px;
 }
 

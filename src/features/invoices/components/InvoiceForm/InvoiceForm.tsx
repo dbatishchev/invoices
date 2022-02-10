@@ -72,7 +72,6 @@ const InvoiceForm: React.FC<InvoiceFormProps> = ({
       return;
     }
 
-    // https://github.com/frenic/csstype#what-should-i-do-when-i-get-type-errors
     footerRef.current.style.setProperty('--shadow-offset', `${top * 100}%`);
   };
 
@@ -84,7 +83,7 @@ const InvoiceForm: React.FC<InvoiceFormProps> = ({
         values: InvoiceFormValues,
         { setSubmitting }: FormikHelpers<InvoiceFormValues>,
       ) => {
-        onSave(values);
+        await onSave(values);
         setSubmitting(false);
         onCancel();
       }}

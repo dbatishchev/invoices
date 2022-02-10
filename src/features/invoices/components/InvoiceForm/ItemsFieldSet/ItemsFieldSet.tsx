@@ -88,8 +88,8 @@ const ItemsFieldSet: React.FC<ItemsFieldSetProps> = ({ items }) => (
             onClick={() => push({
               name: '',
               quantity: 1,
-              price: 3,
-              total: 2,
+              price: 100,
+              total: 100,
             })}
           >
             <Plus />

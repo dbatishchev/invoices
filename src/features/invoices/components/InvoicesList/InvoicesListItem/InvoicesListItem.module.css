@@ -1,14 +1,8 @@
 .invoice {
     padding: 16px 32px;
     background: var(--paper-01);
-    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+    box-shadow: 0 10px 10px -10px rgba(72, 84, 159, 0.100397);
     border-radius: 8px;
-
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*align-items: center;*/
-
-
     display: grid;
     grid-template-areas: 'id paymentDue clientName total status link';
     grid-template-columns: max-content max-content max-content 1fr min-content min-content;

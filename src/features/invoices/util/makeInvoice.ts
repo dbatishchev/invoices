@@ -26,9 +26,9 @@ export default function makeInvoice(): Invoice {
     },
     items: [{
       name: '',
-      quantity: 2,
-      price: 3,
-      total: 4,
+      quantity: 1,
+      price: 100,
+      total: 100,
     }],
     total: 0,
   };
