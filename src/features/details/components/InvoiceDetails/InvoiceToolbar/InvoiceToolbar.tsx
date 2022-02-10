@@ -1,7 +1,7 @@
 import React from 'react';
 import { observer } from 'mobx-react-lite';
 import styles from './InvoiceToolbar.module.css';
-import StatusLabel from '../../StatusLabel/StatusLabel';
+import StatusLabel from '../../../../invoices/components/StatusLabel/StatusLabel';
 import useInvoiceDetailsStore from '../../../hooks/useInvoiceDetailsStore';
 import Paper from '../../../../../app/components/Paper/Paper';
 import DeleteInvoiceButton from '../../DeleteInvoiceButton/DeleteInvoiceButton';

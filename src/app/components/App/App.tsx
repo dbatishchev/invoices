@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Layout from '../Layout/Layout';
 import InvoicesListPage from '../../../features/invoices/pages/InvoicesListPage/InvoicesListPage';
-import InvoiceDetailsPage from '../../../features/invoices/pages/InvoiceDetailsPage/InvoiceDetailsPage';
+import InvoiceDetailsPage from '../../../features/details/pages/InvoiceDetailsPage/InvoiceDetailsPage';
 
 type AppProps = {
 

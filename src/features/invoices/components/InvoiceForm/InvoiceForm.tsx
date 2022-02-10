@@ -16,7 +16,7 @@ import { Invoice } from '../../types/Invoice';
 import FormFieldFormik from '../../../../app/components/FormFieldFormik/FormFieldFormik';
 import Button from '../../../../app/components/Button/Button';
 
-interface InvoiceFormValues extends Invoice {
+type InvoiceFormValues = Invoice & {
   clientName: string,
   clientEmail: string,
   senderAddress: Address,
@@ -25,7 +25,7 @@ interface InvoiceFormValues extends Invoice {
   paymentDue: Date,
   paymentTerms: PaymentTerm,
   description: string,
-}
+};
 
 const AddressValidationSchema = Yup.object().shape({
   street: Yup.string().required('Required'),

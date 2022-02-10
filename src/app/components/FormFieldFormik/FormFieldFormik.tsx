@@ -15,8 +15,8 @@ const FormFieldFormik: React.FC<FormFieldFormikProps> = ({
 }) => (
   <Field name={name}>
     {({
-      field, // { name, value, onChange, onBlur }
-      form, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
+      field,
+      form,
       meta,
     }: FieldProps) => (
       <FormField
@@ -24,7 +24,15 @@ const FormFieldFormik: React.FC<FormFieldFormikProps> = ({
         label={label}
         errors={meta.touched && meta.error ? meta.error : ''}
       >
-        {children ? children({ field, form, meta }) : <Input {...field} hasError={Boolean(meta.touched && meta.error)} />}
+        {children ? children({ field, form, meta }) : (
+          <Input
+            name={field.name}
+            onBlur={field.onBlur}
+            onChange={field.onChange}
+            value={field.value}
+            hasError={Boolean(meta.touched && meta.error)}
+          />
+        )}
       </FormField>
     )}
   </Field>

@@ -42,6 +42,7 @@ const DatePicker: React.FC<DatePickerProps> = ({ value, onChange }) => {
       }) => (
         <div className={styles.header}>
           <button
+            type="button"
             onClick={decreaseMonth}
             disabled={prevMonthButtonDisabled}
             className={styles.headerBtn}
@@ -52,6 +53,7 @@ const DatePicker: React.FC<DatePickerProps> = ({ value, onChange }) => {
             {format(d, 'MMM yyyy')}
           </div>
           <button
+            type="button"
             onClick={increaseMonth}
             disabled={nextMonthButtonDisabled}
             className={styles.headerBtn}

@@ -19,7 +19,7 @@
   "rules": {
     "max-len": ["warn", { "code": 160 }],
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
-    "react/button-has-type": "warn",
+    "react/button-has-type": "off",
     "react/forbid-prop-types": "warn",
     "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", "ts", "tsx"] }],

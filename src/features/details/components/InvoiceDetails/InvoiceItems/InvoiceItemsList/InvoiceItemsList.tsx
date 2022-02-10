@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './InvoiceItemsList.module.css';
-import { InvoiceItem } from '../../../../types/InvoiceItem';
+import { InvoiceItem } from '../../../../../invoices/types/InvoiceItem';
 
 type InvoiceItemsListProps = {
   items: InvoiceItem[]

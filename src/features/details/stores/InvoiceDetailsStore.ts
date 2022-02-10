@@ -2,9 +2,9 @@ import {
   action,
   flow, makeObservable, observable, runInAction,
 } from 'mobx';
-import InvoiceAPI from '../api/InvoiceAPI';
-import { Invoice } from '../types/Invoice';
-import { Status } from '../types/Status';
+import InvoiceAPI from '../../invoices/api/InvoiceAPI';
+import { Invoice } from '../../invoices/types/Invoice';
+import { Status } from '../../invoices/types/Status';
 import nextInvoiceStatus from '../util/nextInvoiceStatus';
 
 class InvoiceDetailsStore {

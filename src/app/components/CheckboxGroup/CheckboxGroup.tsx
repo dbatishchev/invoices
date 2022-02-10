@@ -22,9 +22,10 @@ const CheckboxGroup = <T extends string>({ values, value, onChange }: CheckboxGr
   return (
     <div className={styles.checkboxGroup}>
       {values.map(({ value: v, label }) => (
-        <label key={v} className={styles.checkboxLabel}>
+        <label key={v} className={styles.checkboxLabel} htmlFor={label}>
           <Checkbox
             value={v}
+            id={label}
             checked={value?.includes(v)}
             onChange={handleChange}
           />

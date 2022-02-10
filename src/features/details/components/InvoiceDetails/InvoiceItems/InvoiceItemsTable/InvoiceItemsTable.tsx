@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './InvoiceItemsTable.module.css';
-import { InvoiceItem } from '../../../../types/InvoiceItem';
+import { InvoiceItem } from '../../../../../invoices/types/InvoiceItem';
 
 type InvoiceItemsTableProps = {
   items: InvoiceItem[]

@@ -6,10 +6,10 @@ import styles from './InvoiceDetails.module.css';
 import Paper from '../../../../app/components/Paper/Paper';
 import InvoiceItems from './InvoiceItems/InvoiceItems';
 import InvoiceToolbar from './InvoiceToolbar/InvoiceToolbar';
-import FullAddress from '../FullAddress/FullAddress';
+import FullAddress from '../../../invoices/components/FullAddress/FullAddress';
 import useInvoiceDetailsStore from '../../hooks/useInvoiceDetailsStore';
 import SideSheet from '../../../../app/components/SideSheet/SideSheet';
-import InvoiceForm from '../InvoiceForm/InvoiceForm';
+import InvoiceForm from '../../../invoices/components/InvoiceForm/InvoiceForm';
 import { ReactComponent as ArrowLeft } from '../../../../app/icons/arrow-left.svg';
 import FormattedDate from '../../../../app/components/FormattedDate/FormattedDate';
 

@@ -1,5 +1,5 @@
-import { Status } from '../types/Status';
-import { Invoice } from '../types/Invoice';
+import { Status } from '../../invoices/types/Status';
+import { Invoice } from '../../invoices/types/Invoice';
 
 export default function nextInvoiceStatus(invoice: Invoice) {
   let newStatus:Status | null = null;
